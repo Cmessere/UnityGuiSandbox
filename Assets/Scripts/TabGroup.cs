@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TabGroup : MonoBehaviour
 {
     public List<GameObject> objectsToSwap;
     public List<TabButton> tabButtons;
-    public Color32 tabIdle = new Color32(39, 60, 117, 255);
-    public Color32 tabHover = new Color32(64, 115, 158, 255);
-    public Color32 tabSelected = new Color32(0, 168, 255, 255);
     public TabButton selectedTab;
+    public PanelGroup panelGroup;
     public void Subscribe(TabButton button)
     {
         if(tabButtons == null)
@@ -28,10 +27,20 @@ public class TabGroup : MonoBehaviour
 
     public void OnTabSelected(TabButton button) 
     {
+        if(selectedTab != null)
+        {
+            selectedTab.Deselect();
+        }
         selectedTab = button;
+
+        selectedTab.Select();
+
         ResetTabs();
-        button.background.color = tabSelected;
+        button.background.color = button.GetComponent<TabButton>().tabSelected;
+        button.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().color = button.GetComponent<TabButton>().textColorSelected;
         int index = button.transform.GetSiblingIndex();
+
+        panelGroup.ShowCurrentPanel(index-1);
         for( int i = 0; i < objectsToSwap.Count; i++)
         {
             if( i == index)
@@ -48,7 +57,8 @@ public class TabGroup : MonoBehaviour
     {
         ResetTabs();
         if(selectedTab == null || button != selectedTab)
-        button.background.color = tabHover;
+            button.background.color = button.GetComponent<TabButton>().tabHover;
+            button.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().color = button.GetComponent<TabButton>().textColorSelected;
     }
 
     public void ResetTabs()
@@ -56,7 +66,8 @@ public class TabGroup : MonoBehaviour
         foreach(TabButton button in tabButtons)
         {
             if(selectedTab != null && button == selectedTab) { continue; }
-            button.background.color = tabIdle;
+            button.background.color = button.GetComponent<TabButton>().tabIdle;
+            button.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().color = button.GetComponent<TabButton>().textColorIdle;
         }
     }
 }

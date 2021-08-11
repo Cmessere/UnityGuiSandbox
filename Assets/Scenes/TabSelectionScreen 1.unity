@@ -1009,6 +1009,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1282923137}
   background: {fileID: 112978667}
+  tabIdle:
+    serializedVersion: 2
+    rgba: 4283836953
+  tabHover:
+    serializedVersion: 2
+    rgba: 4285873191
+  tabSelected:
+    serializedVersion: 2
+    rgba: 4288574272
 --- !u!1 &114445817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,6 +2075,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1282923137}
   background: {fileID: 221567282}
+  tabIdle:
+    serializedVersion: 2
+    rgba: 4283836953
+  tabHover:
+    serializedVersion: 2
+    rgba: 4285873191
+  tabSelected:
+    serializedVersion: 2
+    rgba: 4288574272
 --- !u!1 &252117798
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,6 +6675,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1282923137}
   background: {fileID: 1080242130}
+  tabIdle:
+    serializedVersion: 2
+    rgba: 4283836953
+  tabHover:
+    serializedVersion: 2
+    rgba: 4285873191
+  tabSelected:
+    serializedVersion: 2
+    rgba: 4288574272
 --- !u!1 &1099481027
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,6 +7366,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabGroup: {fileID: 1282923137}
   background: {fileID: 1184156479}
+  tabIdle:
+    serializedVersion: 2
+    rgba: 4283836953
+  tabHover:
+    serializedVersion: 2
+    rgba: 4285873191
+  tabSelected:
+    serializedVersion: 2
+    rgba: 4288574272
 --- !u!1 &1192458337
 GameObject:
   m_ObjectHideFlags: 0
