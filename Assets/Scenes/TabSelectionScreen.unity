@@ -8375,9 +8375,15 @@ MonoBehaviour:
   - {fileID: 1851639743}
   - {fileID: 1385488010}
   tabButtons: []
-  tabIdle: {r: 0, g: 0, b: 0, a: 1}
-  tabHover: {r: 0.4, g: 0.4, b: 0.4, a: 1}
-  tabSelected: {r: 1, g: 1, b: 1, a: 1}
+  tabIdle:
+    serializedVersion: 2
+    rgba: 4285873191
+  tabHover:
+    serializedVersion: 2
+    rgba: 4288574272
+  tabSelected:
+    serializedVersion: 2
+    rgba: 4278298624
   selectedTab: {fileID: 0}
 --- !u!1 &1331218780
 GameObject:

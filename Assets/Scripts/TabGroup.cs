@@ -7,9 +7,9 @@ public class TabGroup : MonoBehaviour
 {
     public List<GameObject> objectsToSwap;
     public List<TabButton> tabButtons;
-    public Color tabIdle = new Color(0.15f, 0.23f, 0.45f);
-    public Color tabHover = new Color(0.25f, 0.45f, 0.61f);
-    public Color tabSelected = new Color(0f, 0.65f, 1f);
+    public Color32 tabIdle = new Color32(39, 60, 117, 255);
+    public Color32 tabHover = new Color32(64, 115, 158, 255);
+    public Color32 tabSelected = new Color32(0, 168, 255, 255);
     public TabButton selectedTab;
     public void Subscribe(TabButton button)
     {
